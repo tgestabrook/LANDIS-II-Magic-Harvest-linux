@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,8 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Landis.Extension.MagicHarvest</RootNamespace>
     <AssemblyName>Landis.Extension.MagicHarvest</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>false</Deterministic>
     <TargetFrameworkProfile />
@@ -27,9 +27,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\build\extensions</OutputPath>
+    <OutputPath>..\..\build\extensions</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,11 +41,11 @@
       <HintPath>packages\Landis.Core.Implementation.2.0.0\lib\netstandard2.0\Landis.Core.Implementation.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Extension.BiomassHarvest-v4">
-      <HintPath>..\build\extensions\Landis.Extension.BiomassHarvest-v4.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Extension.BiomassHarvest-v4.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.HarvestManagement-v4, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\build\extensions\Landis.Library.HarvestManagement-v4.dll</HintPath>
+      <HintPath>..\..\build\extensions\Landis.Library.HarvestManagement-v4.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.SiteHarvest-v2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Landis.SpatialModeling, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -67,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\InputParameters.cs" />
+    <Compile Include="src\InputParametersParser.cs" />
+    <Compile Include="src\PlugIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="NuGet.config">
       <SubType>Designer</SubType>
     </None>
@@ -74,5 +78,5 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
