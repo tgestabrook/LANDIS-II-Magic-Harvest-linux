@@ -27,7 +27,8 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\build\extensions</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,14 +42,14 @@
       <HintPath>packages\Landis.Core.Implementation.3.0.1\lib\netstandard2.0\Landis.Core.Implementation.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Extension.BiomassHarvest-v4">
-      <HintPath>C:\Program Files\LANDIS-II-v8\extensions\Landis.Extension.BiomassHarvest-v4.dll</HintPath>
+      <HintPath>..\build\extensions\Landis.Extension.BiomassHarvest-v4.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Landscapes, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Landis.Landscapes.2.0.1\lib\netstandard2.0\Landis.Landscapes.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.HarvestManagement-v4, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\LANDIS-II-v8\extensions\Landis.Library.HarvestManagement-v4.dll</HintPath>
+      <HintPath>..\build\extensions\Landis.Library.HarvestManagement-v4.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.SiteHarvest-v2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Landis.SpatialModeling, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
